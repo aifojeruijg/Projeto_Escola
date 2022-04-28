@@ -71,3 +71,23 @@ body {
 .img-card {
     padding-bottom: 10px;
 }
+
+@media(max-width: 953px ) {
+    .options {
+        grid-template-areas: "card card";
+    }
+
+    .main {
+        height: 1100px;
+    }
+}
+
+@media(max-width: 673px ) {
+    .options {
+        grid-template-areas: "card";
+    }
+
+    .main {
+        height: 2000px;
+    }
+}
