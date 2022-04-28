@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/aluno.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/menu.css">
+    <title>Matricula de atividades</title>
+</head>
+<body>
+    <header>  
+        <div class="content">
+            <nav class="navinicio">
+                <a href="index.html" class="logo">NomeEscola</a>
+                    <ul class="nav-menu">
+                    <li class="nav-item"><a href="/aluno.html" class="nav-link">Aluno</a></li>
+                    <li class="nav-item"><a href="/forum.html" class="nav-link">Duvidas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Outros <i class="fa-solid fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="#" class="nav-link" >Responsável</a></li>
+                            <li><a href="#" class="nav-link">Professor</a></li>
+                            <li><a href="#" class="nav-link">Secretaria</a></li>
+                            <li><a href="/financeiro.html" class="nav-link">Financeiro</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu-mobile">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+               </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="block">
+            <div class="text">
+                    <h1>Pagina para inscriçoes</h1>
+                    <div class="line"></div>                
+                   <p>
+                      Para cadastrar alguma atividade, basta selecionar no menu abaixo
+                      e confirmar o cadastro.
+                   </p>
+            </div>
+            <div class="aluno">
+                <div class="matricula">
+                    <div class="container">
+                        <form type="post" action="/aluno/forum.html">
+                        <div class="input">
+                        <input type="text" id="nome" name="nome" placeholder="Nome">
+                        </div>
+                    <br>                    
+                        <label for="materia">Materias: </label>
+                        <select>
+                        <option value="pintura">Pintura</option>
+                        <option value="natacao">Natação</option>
+                        </select>
+                    <br>
+                
+                    <input type="submit" value="cadastrar">
+                </form>
+            </div>
+        </div>               
+    </main>
+        <footer class="footer">
+            <div class="left">
+                <p>Praça General Osório, 125 - Centro, Curitiba</p>
+                <p>Telefone: (12)34567-8910</p>	
+                <p>E-mail: NomeEscola@gmail.com</p>	
+            </div>
+            <div class="right">
+                <h4>Conheça nossas redes sociais</h4>
+                <i class="fa-brands fa-facebook-square" id="facebook"></i>
+                <i class="fa-brands fa-twitter-square" id="twitter"></i>
+                <i class="fa-brands fa-instagram-square" id="instagram"></i>
+            </div>
+        </footer>
+    
+    
+    
+</body>
+</html>
