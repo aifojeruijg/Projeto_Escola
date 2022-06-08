@@ -47,7 +47,7 @@
 </section>
 
     <section id="teste">
-    <h5>Olá, como posso ajudar?</h5>
+    <h5><i class="fa-solid fa-robot"></i>Olá, como posso ajudar?</h5>
     </section>
     <div class="filtro">
         <input type="text" class="procura" placeholder="Envie sua mensagem...">
@@ -77,7 +77,7 @@
 
         btnChat.onclick = ()=>{
             dados.forEach(function(chat){
-            teste.innerHTML +="<h5 class=h5b>"+chat.msg2+"</h5>" +  "<h5>"+chat.msg3+"</h5>" +  "<h5 class=h5b>"+chat.msg4+"</h5>"+  "<h5>"+chat.msg5+"</h5>";
+            teste.innerHTML +="<h5 class=h5b >"+chat.msg2+"</h5>" +  "<h5>"+ '<i class="fa-solid fa-robot"></i>' +chat.msg3+"</h5>" +  "<h5 class=h5b>"+chat.msg4+"</h5>"+  "<h5>" + '<i class="fa-solid fa-robot"></i>' +chat.msg5+"</h5>";
         });
         }
 
