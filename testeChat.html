@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+
+      body {
+          background: #959595;
+      }
+
+      h1{
+          text-align: center;
+          margin: 40px;
+      }
+
+      section {
+          text-align: center;
+          margin-bottom: 50px;
+      }
+      .chat {
+          max-width: 800px;
+          margin: 0 auto;
+          background: #595959;
+          border-radius: 10px;
+          border: 3px solid rgb(0, 0, 0);
+          height: 400px;
+          padding: 20px;
+      }
+
+      .p2 {
+         text-align: right; 
+      }
+
+      p{
+          padding: 15px;
+          margin-bottom: 25px;
+          color: white;
+          font-size: 20px;
+          background-color: #959595;
+          border-radius: 10px;
+          font-weight: bold;
+      }
+
+      
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Chat</h1>      
+    </header>
+
+    <section>
+        <button id="btnChat">Simular Chat</button>
+
+    </section>
+
+
+    <script>
+
+        var dados = JSON.parse(' [ {"msg1": "Olá, como posso ajudar?", "msg2": "Gostaria de receber o valor da mensalidade do meu filho...", "msg3": "Qual é o nome completo do seu filho?", "msg4": "Julio Cesar Jubel Lopes" , "msg5": "Valor mensalidade de Julio Cesar Jubel Lopes : R$550" }]')
+        var btnChat = document.getElementById('btnChat');
+
+        btnChat.onclick = ()=>{
+            dados.forEach(function(chat){
+            document.body.innerHTML += "<div class= chat>" + "<p>"+chat.msg1+"</p>" + "<p class=p2>"+chat.msg2+"</p>" +  "<p>"+chat.msg3+"</p>" +  "<p class=p2>"+chat.msg4+"</p>"+  "<p>"+chat.msg5+"</p>" + "</div>";
+        });
+        }
+
+    </script>
+
+
+</body>
+</html>
