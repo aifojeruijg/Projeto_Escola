@@ -4,75 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      *{
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
-
-
-      body {
-          background: #959595;
-      }
-
-      h1{
-          text-align: center;
-          margin: 40px;
-      }
-
-      section {
-          text-align: center;
-          margin-bottom: 50px;
-      }
-      .chat {
-          max-width: 800px;
-          margin: 0 auto;
-          background: #595959;
-          border-radius: 10px;
-          border: 3px solid rgb(0, 0, 0);
-          height: 400px;
-          padding: 20px;
-      }
-
-      .p2 {
-         text-align: right; 
-      }
-
-      p{
-          padding: 15px;
-          margin-bottom: 25px;
-          color: white;
-          font-size: 20px;
-          background-color: #959595;
-          border-radius: 10px;
-          font-weight: bold;
-      }
-
-      
-    </style>
+    <link rel="stylesheet" href="/chat.css">
+    <link rel="stylesheet" href="/menu.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <title>Chat</title>
 </head>
 <body>
 
     <header>
-        <h1>Chat</h1>      
-    </header>
+    <div class="content">
+        <nav class="navinicio">
+            <a href="index.html" class="logo">Inova</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="aluno.html" class="nav-link">Sou aluno</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Outros <i class="fa-solid fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="responsavel.html" class="nav-link" >Responsável</a></li>
+                        <li><a href="professor.html" class="nav-link">Professor</a></li>
+                        <li><a href="secretaria.html" class="nav-link">Secretaria</a></li>
+                        <li><a href="financeiro.html" class="nav-link">Financeiro</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="menu-mobile">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
+</header>
 
-    <section>
-        <button id="btnChat">Simular Chat</button>
+<section class="inicio">
 
+    <h1>Chat</h1>
+    <div class="line"></div>
+    <h3>Entre em contato com a escola</h3>
+    <a id="btnChat">Simular Chat</a>
+
+</section>
+
+    <section id="teste">
+    <h5>Olá, como posso ajudar?</h5>
     </section>
+    <div class="filtro">
+        <input type="text" class="procura" placeholder="Envie sua mensagem...">
+        <button class="filtro-btn">Enviar</button>
+    </div>
 
+
+    <div class="footer">
+        <div class="left">
+            <p>Praça General Osório, 125 - Centro, Curitiba</p>
+            <p>Telefone: (12)34567-8910</p>	
+            <p>E-mail: inova@gmail.com</p>	
+        </div>
+        <div class="right">
+            <h4>Conheça nossas redes sociais</h4>
+            <i class="fa-brands fa-facebook-square" id="facebook"></i>
+            <i class="fa-brands fa-twitter-square" id="twitter"></i>
+            <i class="fa-brands fa-instagram-square" id="instagram"></i>
+        </div>
+    </div>
 
     <script>
 
-        var dados = JSON.parse(' [ {"msg1": "Olá, como posso ajudar?", "msg2": "Gostaria de receber o valor da mensalidade do meu filho...", "msg3": "Qual é o nome completo do seu filho?", "msg4": "Julio Cesar Jubel Lopes" , "msg5": "Valor mensalidade de Julio Cesar Jubel Lopes : R$550" }]')
+        var dados = JSON.parse(' [ {"msg2": "Gostaria de receber o valor da mensalidade do meu filho...", "msg3": "Qual é o nome completo do seu filho?", "msg4": "Julio Cesar Jubel Lopes" , "msg5": "Valor mensalidade de Julio Cesar Jubel Lopes : R$550" }]')
         var btnChat = document.getElementById('btnChat');
+        var teste = document.getElementById('teste');
 
         btnChat.onclick = ()=>{
             dados.forEach(function(chat){
-            document.body.innerHTML += "<div class= chat>" + "<p>"+chat.msg1+"</p>" + "<p class=p2>"+chat.msg2+"</p>" +  "<p>"+chat.msg3+"</p>" +  "<p class=p2>"+chat.msg4+"</p>"+  "<p>"+chat.msg5+"</p>" + "</div>";
+            teste.innerHTML +="<h5 class=h5b>"+chat.msg2+"</h5>" +  "<h5>"+chat.msg3+"</h5>" +  "<h5 class=h5b>"+chat.msg4+"</h5>"+  "<h5>"+chat.msg5+"</h5>";
         });
         }
 
