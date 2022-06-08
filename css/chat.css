@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #68aacd;
+}
+
+h1{
+    text-align: center;
+    margin: 40px;
+    margin-bottom: 0;
+    font-size: 35px;
+}
+
+h3 {
+    text-align: center;
+    margin: 15px;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+section {
+    text-align: center;
+    padding-bottom: 50px;
+    background: #fefefe;
+    
+}
+#teste {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #68aacd;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid #1E3D5B;
+    height: 420px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.line {
+    width: 50px;
+    height: 3px;
+    background: #1E3D5B;
+    margin: 0px auto;
+    border-radius: 50px;
+    margin-top: 5px;
+}
+
+#btnChat{
+    cursor: pointer;
+    background: #1E3D5B;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    transition: .4s;
+    border-radius: 8px;
+    
+}
+
+#btnChat:hover{
+    background: transparent;
+    color: black;
+    border: 2px solid #1E3D5B;
+}
+
+.h5b {
+   text-align: right; 
+}
+
+h5{
+    padding: 15px;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 20px;
+    background-color: #3185b3;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+
+.filtro {
+    max-width: 800px;
+    height: 100px;
+    background-color: #68aacd;
+    margin: 0 auto;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #1E3D5B;
+    border-bottom: 2px solid #1E3D5B;
+    border-right: 2px solid #1E3D5B;
+    margin-bottom: 100px;
+}
+
+.filtro-btn {
+    width: 20%;
+    height: 49px;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    background-color: #68aacd;
+    color:white;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: bold;
+    border: 2px solid #1E3D5B;
+    font-size: 15px;
+}
+
+.filtro-btn:hover {
+    background: #1E3D5B;
+}
+
+
+.procura {
+    width: 70%;
+    height: 50px;
+    border-radius: 10px 0px 0px 10px;
+    text-indent: 10px;
+    transition: .5s;
+    background-color: white;
+    font-size: 15px;
+    outline: none;
+    color: #1E3D5B;
+    font-size: 18px;
+}
+
+
+
+
+
+/* FOOTER */
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #1E3D5B;
+    gap: 40px;
+    color: white;
+    padding: 30px;
+    
+}
+
+.footer p {
+    margin: 6px;
+    font-size: 16px;
+}
+
+.footer h4 {
+    margin: 2px;
+    font-size: 20px;
+}
+
+.footer i {
+    font-size: 50px;
+    margin-top: 5px;
+    transition: .4s;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #00aff0;
+}
+
+.footer i:hover {
+    transform: scale(1.2);
+}
+
+.right {
+    text-align: center;
+}
+
+@media (max-width:870px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer p {
+        text-align: center;
+    }   
+}
