@@ -97,8 +97,8 @@
 				</div>
                 <div class="div">
                     <a href="#" class="buton" id="btnProva">Agenda de Provas</a>
-                    <a href="#" class="buton">Consultar Diciplinas</a>
-                    <a href="#" class="buton">Atividades Extras</a>
+                    <a href="#" class="buton" id="btnDiciplina">Consultar Diciplinas</a>
+                    <a href="#" class="buton" id="btnAtividade">Atividades Extras</a>
                 </div>
         </section>
 		<section>
@@ -125,10 +125,21 @@
     <script src="/js/menu.js"></script>
     <script>
     let provas = JSON.parse('[{"prova1" : "10/06/2022","prova2": "12/06/2022"}]');
+    let diciplina = JSON.parse('[{"nota1": "8.5", "nota2" : "10.0"},{"falta1": "4", "falta2" : "2"}]');
+
     let btnProva = document.getElementById('btnProva');
+    let btnDiciplina = document.getElementById('btnDiciplina');
+    let btnAtividade = document.getElementById('btnAtividade');
+
     btnProva.onclick = ()=>{
         provas.forEach(function(prova) {
             table.innerHTML += "<h5>Portugues: "+prova.prova1+"</h5"+"<br>"+"<h5>Historia: "+prova.prova2;
+        });
+    }
+
+    btnDiciplina.onclick = ()=>{
+        diciplina.forEach(function(faltas){
+            table.innerHTML += "<h5>Portugues<br>Faltas: " + faltas.falta1 + "<br>Notas: " + faltas.nota1 + "</h5>";
         });
     }
 
