@@ -31,13 +31,29 @@
             color: black;
         }
 
-        .table{
+        .container-table{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: wrap;
             width: 950px;
             height: 49px;
             margin: 30px auto;
             padding: 100px;
             background-color: #1E3D5B;
             border-radius: 30px;
+        }
+
+        h5{
+            display: inline;
+            padding: 20px;
+            margin: 0px auto;
+            color: white;
+            font-size: 20px;
+            background-color: #3185b3;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
         }
 
 
@@ -86,7 +102,7 @@
                 </div>
         </section>
 		<section>
-            <div class="table" id="table">
+            <div class="container-table" id="table">
 
             </div>
 
@@ -112,7 +128,7 @@
     let btnProva = document.getElementById('btnProva');
     btnProva.onclick = ()=>{
         provas.forEach(function(prova) {
-            table.innerHTML += "<h5>Portugues: "+prova.prova1+"</h5";
+            table.innerHTML += "<h5>Portugues: "+prova.prova1+"</h5"+"<br>"+"<h5>Historia: "+prova.prova2;
         });
     }
 
