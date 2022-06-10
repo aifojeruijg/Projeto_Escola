@@ -32,17 +32,19 @@
         }
 
         .container-table{
+            max-width: 950px;
+            margin: 0 auto;
+            height: 500px;
+            background: #1E3D5B;
             display: flex;
             align-content: center;
             justify-content: center;
             flex-wrap: wrap;
-            width: 950px;
-            height: 49px;
-            margin: 30px auto;
-            padding: 100px;
-            background-color: #1E3D5B;
-            border-radius: 30px;
+            margin-top: 50px;
+            overflow-y: scroll;
         }
+
+        
 
         h5{
             display: inline;
@@ -55,6 +57,15 @@
             font-weight: bold;
             text-align: center;
         }
+
+         footer{
+            margin-top: 150px;
+        }
+        body{
+            background: #fefefe;
+        }
+        
+       
 
 
     </style>
@@ -96,15 +107,14 @@
                         tirar duvidas com seus professor pelo forum. </p>
 				</div>
                 <div class="div">
-                    <a href="#" class="buton" id="btnProva">Agenda de Provas</a>
-                    <a href="#" class="buton" id="btnDiciplina">Consultar Diciplinas</a>
-                    <a href="#" class="buton" id="btnAtividade">Atividades Extras</a>
+                    <a class="buton" id="btnProva">Agenda de Provas</a>
+                    <a class="buton" id="btnDiciplina">Consultar Diciplinas</a>
+                    <a class="buton" id="btnAtividade">Atividades Extras</a>
                 </div>
         </section>
-		<section>
-            <div class="container-table" id="table">
 
-            </div>
+
+            <section class="container-table" id="table">
 
         </section>
     </main>
@@ -125,21 +135,24 @@
     <script src="/js/menu.js"></script>
     <script>
     let provas = JSON.parse('[{"prova1" : "10/06/2022","prova2": "12/06/2022"}]');
-    let diciplina = JSON.parse('[{"nota1": "8.5", "nota2" : "10.0"},{"falta1": "4", "falta2" : "2"}]');
+    let diciplina = JSON.parse('[{"nota1": "8.5", "nota2" : "10.0","falta1": "4", "falta2" : "2"}]');
 
     let btnProva = document.getElementById('btnProva');
     let btnDiciplina = document.getElementById('btnDiciplina');
     let btnAtividade = document.getElementById('btnAtividade');
 
     btnProva.onclick = ()=>{
+
         provas.forEach(function(prova) {
+            table.innerHTML='';
             table.innerHTML += "<h5>Portugues: "+prova.prova1+"</h5"+"<br>"+"<h5>Historia: "+prova.prova2;
         });
     }
 
     btnDiciplina.onclick = ()=>{
-        diciplina.forEach(function(faltas){
-            table.innerHTML += "<h5>Portugues<br>Faltas: " + faltas.falta1 + "<br>Notas: " + faltas.nota1 + "</h5>";
+        diciplina.forEach(function(materia){
+            table.innerHTML='';
+            table.innerHTML += "<h5>Portugues<br>Faltas: " + materia.falta1 + "<br>Notas: " + materia.nota1 + "</h5>";
         });
     }
 
