@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/aluno.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/menu.css">
+    <title>Matricula de atividades</title>
+
+    <style>
+        section{
+            width: 780px;
+            height: auto;
+            margin: 100px auto;
+        }
+
+        #galeria img{
+            float: left;
+            width: 240px;
+            padding: 5px;
+            transition: all 0.4s;
+        }
+
+        #galeria{
+            display: inline;
+            align-content: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        #bt_artes:checked ~ #galeria .esportes,
+        #bt_artes:checked ~ #galeria .raciocinio{
+            opacity: .4;
+            transform: scale(0.5);
+        }
+        #bt_esportes:checked ~ #galeria .artes,
+        #bt_esportes:checked ~ #galeria .raciocinio{
+            opacity: .4;
+            transform: scale(0.5);
+        }
+        #bt_raciocinio:checked ~ #galeria .esportes,
+        #bt_raciocinio:checked ~ #galeria .artes{
+            opacity: .4;
+            transform: scale(0.5);
+        }
+
+        button{
+            border: none;
+            padding: 0px;
+        }
+
+        section{
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            flex-wrap: wrap
+        }
+
+        section label{
+            width: 175px;
+            padding: 20px 10px;
+            display: block;
+            float: left;
+            background-color: #3185b3;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        input:checked + label{
+            background-color: #1E3D5B;
+        }
+
+        input{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>  
+        <div class="content">
+            <nav class="navinicio">
+                <a href="index.html" class="logo">Inova</a>
+                    <ul class="nav-menu">
+                    <li class="nav-item"><a href="/aluno.html" class="nav-link">Aluno</a></li>
+                    <li class="nav-item"><a href="/forum.html" class="nav-link">Duvidas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Outros <i class="fa-solid fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="responsavel.html" class="nav-link" >Responsável</a></li>
+                            <li><a href="professor.html" class="nav-link">Professor</a></li>
+                            <li><a href="secretaria.html" class="nav-link">Secretaria</a></li>
+                            <li><a href="financeiro.html" class="nav-link">Financeiro</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu-mobile">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+               </div>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="block">
+            <div class="text">
+                    <h1>Pagina para inscriçoes</h1>
+                    <div class="line"></div>                
+                   <p>
+                      Para cadastrar alguma atividade, basta selecionar no menu abaixo
+                      e confirmar o cadastro.
+                   </p>
+            </div>
+            <section>
+                <input type="radio" name="bt" id="bt_todos" checked>
+                <label for="bt_todos">TODOS</label>
+                <input type="radio" name="bt" id="bt_artes">
+                <label for="bt_artes">ARTES</label>
+                <input type="radio" name="bt" id="bt_esportes">
+                <label for="bt_esportes">ESPORTES</label>
+                <input type="radio" name="bt" id="bt_raciocinio">
+                <label for="bt_raciocinio">RACIOCINIO</label>
+                <div id="galeria">
+                    <button type="button"><img src="/img/natacao.jpg" class="esportes"></button>
+                    <button type="button"><img src="/img/musica.jpg" class="artes"></button>
+                    <button type="button"><img src="/img/Xadrez.jpg" class="raciocinio"></button>
+                    <button type="button"><img src="/img/Logica.jpg" class="raciocinio"></button>
+                    <button type="button"><img src="/img/futebol.jpg" class="esportes"></button>
+                    <button type="button"><img src="/img/pintura.jpg" class="artes"></button>
+                    <button type="button"><img src="/img/teatro.jpg" class="artes"></button>
+                    <button type="button"><img src="/img/bale.jpg" class="artes"></button>
+                    <button type="button"><img src="/img/volei.jpg" class="esportes"></button>
+                </div>
+            </section>
+    </main>
+        <footer class="footer">
+            <div class="left">
+                <p>Praça General Osório, 125 - Centro, Curitiba</p>
+                <p>Telefone: (12)34567-8910</p>	
+                <p>E-mail: inova@gmail.com</p>	
+            </div>
+            <div class="right">
+                <h4>Conheça nossas redes sociais</h4>
+                <i class="fa-brands fa-facebook-square" id="facebook"></i>
+                <i class="fa-brands fa-twitter-square" id="twitter"></i>
+                <i class="fa-brands fa-instagram-square" id="instagram"></i>
+            </div>
+        </footer>
+    
+    
+    
+</body>
+</html>
