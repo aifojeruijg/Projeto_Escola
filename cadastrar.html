@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
     <link rel="stylesheet" href="/css/menu.css">
     <title>Matricula de atividades</title>
+
+    <style>
+        
+        
+    </style>
 </head>
 <body>
     <header>  
@@ -43,25 +48,28 @@
                       e confirmar o cadastro.
                    </p>
             </div>
-            <div class="aluno">
-                <div class="matricula">
-                    <div class="container">
-                        <form type="post" action="/aluno/forum.html">
-                        <div class="input">
-                        <input type="text" id="nome" name="nome" placeholder="Nome">
-                        </div>
-                    <br>                    
-                        <label for="materia">Materias: </label>
-                        <select>
-                        <option value="pintura">Pintura</option>
-                        <option value="natacao">Natação</option>
-                        </select>
-                    <br>
-                
-                    <input type="submit" value="cadastrar">
-                </form>
-            </div>
-        </div>               
+            <section>
+                <input type="radio" name="bt" id="bt_todos" checked>
+                <label for="bt_todos">TODOS</label>
+                <input type="radio" name="bt" id="bt_artes">
+                <label for="bt_artes">ARTES</label>
+                <input type="radio" name="bt" id="bt_esportes">
+                <label for="bt_esportes">ESPORTES</label>
+                <input type="radio" name="bt" id="bt_raciocinio">
+                <label for="bt_raciocinio">RACIOCINIO</label>
+                <div id="galeria">
+                    <button type="button" id="btnNatacao"><img src="/img/natacao.jpg" class="esportes"></button>
+                    <button type="button" id="btnMusica"><img src="/img/musica.jpg" class="artes"></button>
+                    <button type="button" id="btnXadrez"><img src="/img/Xadrez.jpg" class="raciocinio"></button>
+                    <button type="button" id="btnLogica"><img src="/img/Logica.jpg" class="raciocinio"></button>
+                    <button type="button" id="btnFutebol"><img src="/img/futebol.jpg" class="esportes"></button>
+                    <button type="button" id="btnPintura"><img src="/img/pintura.jpg" class="artes"></button>
+                    <button type="button" id="btnTeatro"><img src="/img/teatro.jpg" class="artes"></button>
+                    <button type="button" id="btnBale"><img src="/img/bale.jpg" class="artes"></button>
+                    <button type="button" id="btnVolei"><img src="/img/volei.jpg" class="esportes"></button>
+                </div>
+            </section>
+            <script src="/js/atividades.js"></script>
     </main>
         <footer class="footer">
             <div class="left">
