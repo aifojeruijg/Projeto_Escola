@@ -9,13 +9,13 @@
 body {
     background: #68aacd;
     font-family: 'Poppins', sans-serif;
+    height: 100%;
 }
 
 .main {
-
+    height: 100%;;
     background: #ececec;
-    padding-top: 50px;;
-    padding-bottom: 1px;
+    padding-top: 50px;
 }
 
 
@@ -23,7 +23,6 @@ body {
 .main h1 {
     text-align: center;
     font-weight: bold;
-    letter-spacing: px;
     font-size: 6vmin;
     color: #1e5b2d;
 }
@@ -32,9 +31,183 @@ body {
     text-align: center;
     font-weight: bold;
     letter-spacing: px;
-    font-size: 5vmin;
+    font-size: 4vmin;
     color: #1e5b2d;
 }
+/*############### CONSULTAS ################*/
+.name{
+    border: 2px #1e5b2d solid;
+    border-radius: 50px;
+    padding: 5px;
+
+}
+.nameL{
+    text-align: center;
+    font-size: 3.2vmin;
+    letter-spacing: 1px;
+    color: #1e5b2d;
+    margin: 15px;
+    margin-left: 200px;
+}
+.nameL2{
+    text-align: center;
+    font-size: 3.2vmin;
+    letter-spacing: 1px;
+    color: #1e5b2d;
+    margin-left: 80px;
+    
+}
+.name2{
+    border: 2px #1e5b2d solid;
+    border-radius: 50px;
+    padding: 5px;
+}
+.div{
+    width: 950px;
+    height: 49px;
+    margin: 10px auto;
+    padding-bottom: 50px;
+}
+
+.buton{
+    background-color: #1e5b2d;
+    margin: 70px 4%;
+    border-radius: 50px;
+    padding: 30px;
+    border: 2px solid transparent;
+    text-decoration: none;
+    color:white;
+    transition: .4s ;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+}
+.buton:hover{
+    border: 2px solid #1e5b2d;
+    background: transparent;
+    color: black;
+}
+
+.container-table{
+    display: flex;
+    max-width: 950px;
+    margin: 250px auto;
+
+    background: #1e5b2d;
+    align-content: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    align-content: space-around;
+    border-radius: 10px;
+}
+
+
+
+h5{
+    display: inline;
+    padding: 30px;
+    margin: 1px auto;
+    color: white;
+    font-size: 20px;
+    background-color: #70cd68;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+h6{
+    display: flex;
+    padding: 60px;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    background-color: #70cd68;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+body{
+    background: #ececec;
+}
+    /*############# ATIVIDADES ################*/
+    .section{
+        width: 780px;
+        height: auto;
+        margin: 100px auto;
+        height: 500px;
+        background: #ececec;
+    }
+    
+    #galeria img{
+        float: left;
+        width: 240px;
+        padding: 5px;
+        transition: all 0.4s;
+        border-radius: 30px;
+    }
+    
+    #galeria{
+        display: inline;
+        align-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    #bt_artes:checked ~ #galeria .esportes,
+    #bt_artes:checked ~ #galeria .raciocinio{
+        opacity: .4;
+        transform: scale(0.5);
+    }
+    #bt_esportes:checked ~ #galeria .artes,
+    #bt_esportes:checked ~ #galeria .raciocinio{
+        opacity: .4;
+        transform: scale(0.5);
+    }
+    #bt_raciocinio:checked ~ #galeria .esportes,
+    #bt_raciocinio:checked ~ #galeria .artes{
+        opacity: .4;
+        transform: scale(0.5);
+    }
+    
+    button{
+        border: none;
+        padding: 0px;
+        border-radius: 50px;
+        background-color: transparent;
+    }
+    
+    section{
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        max-width: 950px;
+            margin: 250px auto;
+            height: 500px;
+    }
+    
+    .efeito{
+        width: 175px;
+        padding: 20px 10px;
+        display: block;
+        float: left;
+        background-color: #70cd68;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        margin: 5px;
+        border-radius: 50px;
+        transition: 0.4s;
+    }
+    
+    input:checked + label{
+        background-color: #1e5b2d;
+        transition: 0.4s;
+    }
+    
+    .none{
+        display: none;
+    }
 
 .line {
     width: 100px;
@@ -53,17 +226,6 @@ body {
     margin: 15px;
 }
 
-.responsavel {
-    border-collapse: collapse;
-    width: 30%;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 10px 30px 5px rgba(0,0,0,.15);
-    margin: 200px auto;
-    border: 2px solid #70cd68;
-    text-align: center;
-    padding: 25px;
-}
 
 .content {
     max-width: 1200px;
@@ -99,10 +261,6 @@ header {
         background: #68aacd;
 }
 
-form{
-    padding: 20px;
-}
-
 /*################################*/
 
 .footer {
@@ -113,6 +271,7 @@ form{
     gap: 40px;
     color: white;
     padding: 30px;
+    margin-top: 380px;
 }
 
 .footer p {
