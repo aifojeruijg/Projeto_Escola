@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/chat.css">
-    <link rel="stylesheet" href="/css/menu.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/chat.css">
+    <link rel="stylesheet" href="/menu.css">
+    <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
     <title>Chat</title>
 </head>
@@ -42,18 +42,16 @@
     <h1>Chat</h1>
     <div class="line"></div>
     <h3>Entre em contato com a escola</h3>
-    <a id="btnChat">Simular Chat</a>
-
+    
 </section>
 
     <section id="teste">
     <h5><i class="fa-solid fa-robot"></i>Olá, como posso ajudar?</h5>
-    </section>
+</section>
     <div class="filtro">
         <input type="text" class="procura" placeholder="Envie sua mensagem...">
-        <button class="filtro-btn">Enviar</button>
+        <button class="filtro-btn" id="btnChat">Enviar</button>
     </div>
-
 
     <div class="footer">
         <div class="left">
@@ -69,19 +67,8 @@
         </div>
     </div>
 
-    <script>
-
-        var dados = JSON.parse(' [ {"msg2": "Gostaria de receber o valor da mensalidade do meu filho...", "msg3": "Qual é o nome completo do seu filho?", "msg4": "Julio Cesar Jubel Lopes" , "msg5": "Valor mensalidade de Julio Cesar Jubel Lopes : R$550" }]')
-        var btnChat = document.getElementById('btnChat');
-        var teste = document.getElementById('teste');
-
-        btnChat.onclick = ()=>{
-            dados.forEach(function(chat){
-            teste.innerHTML +="<h5 class=h5b >"+chat.msg2+"</h5>" +  "<h5>"+ '<i class="fa-solid fa-robot"></i>' +chat.msg3+"</h5>" +  "<h5 class=h5b>"+chat.msg4+"</h5>"+  "<h5>" + '<i class="fa-solid fa-robot"></i>' +chat.msg5+"</h5>";
-        });
-        }
-
-    </script>
+   <script src="/chat.js">
+</script>
 
 
 </body>
