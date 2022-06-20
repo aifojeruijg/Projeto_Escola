@@ -26,7 +26,6 @@ h3 {
 
 section {
     text-align: center;
-    padding-bottom: 50px;
     background: #fefefe;
     
 }
@@ -35,7 +34,7 @@ section {
     margin: 0 auto;
     background: #68aacd;
     border-radius: 10px 10px 0px 0px;
-    border: 2px solid #1E3D5B;
+    border: 5px solid #1E3D5B;
     height: 420px;
     padding: 20px;
     overflow-y: scroll;
@@ -50,24 +49,6 @@ section {
     margin-top: 5px;
 }
 
-#btnChat{
-    cursor: pointer;
-    background: #1E3D5B;
-    color: white;
-    padding: 15px 20px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    border: 2px solid transparent;
-    transition: .4s;
-    border-radius: 8px;
-    
-}
-
-#btnChat:hover{
-    background: transparent;
-    color: black;
-    border: 2px solid #1E3D5B;
-}
 
 .h5b {
    text-align: right; 
@@ -102,13 +83,13 @@ h5 i{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border-left: 2px solid #1E3D5B;
-    border-bottom: 2px solid #1E3D5B;
+    border-left: 5px solid #1E3D5B;
+    border-bottom: 5px solid #1E3D5B;
     border-right: 2px solid #1E3D5B;
     margin-bottom: 100px;
 }
 
-.filtro-btn {
+#btnChat {
     width: 20%;
     height: 49px;
     border-radius: 0px 5px 5px 0px;
@@ -122,7 +103,7 @@ h5 i{
     font-size: 15px;
 }
 
-.filtro-btn:hover {
+#btnChat:hover {
     background: #1E3D5B;
 }
 
@@ -139,3 +120,6 @@ h5 i{
     color: #1E3D5B;
     font-size: 18px;
 }
+
+
+
