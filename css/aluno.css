@@ -118,8 +118,7 @@ header {
 }
 
 .container-table{
-    max-width: 950px;
-    margin: 250 auto;
+    max-width: 780px;
     height: 500px;
     background: #1E3D5B;
     display: flex;
@@ -128,6 +127,8 @@ header {
     flex-wrap:wrap;
     align-content: space-around;
     border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 550px;
 }
 
 
@@ -161,7 +162,7 @@ body{
     background: #ececec;
 }
 /*############# ATIVIDADES ################*/
-section{
+#section{
     width: 780px;
     height: auto;
     margin: 100px auto;
