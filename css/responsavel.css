@@ -16,6 +16,7 @@ body {
     height: 100%;;
     background: #ececec;
     padding-top: 50px;
+    margin-top: 0;
 }
 
 
@@ -90,8 +91,7 @@ body {
 .container-table{
     display: flex;
     max-width: 950px;
-    margin: 250px auto;
-
+    margin: 160px auto;
     background: #1e5b2d;
     align-content: center;
     justify-content: center;
@@ -130,7 +130,8 @@ h6{
 body{
     background: #ececec;
 }
-    /*############# ATIVIDADES ################*/
+
+/*############# ATIVIDADES ################*/
     .section{
         width: 780px;
         height: auto;
@@ -182,7 +183,7 @@ body{
         align-content: center;
         flex-wrap: wrap;
         max-width: 950px;
-            margin: 250px auto;
+            margin: 10px auto;
             height: 500px;
     }
     
