@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/modal.css">
     <link rel="stylesheet" href="/css/professor.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
     <link rel="stylesheet" href="/css/menu.css">
     <title>Professor</title>
 </head>
+
 <body>
     
     <div class="content">
@@ -42,39 +44,103 @@
     <section class="options">
         <div class="card">
             <div class="img-card"><img src="img/addconteudo.png" alt="add" width="200"></div>
-            <div><a href="#" class="btn">Adicionar Conteúdo</a></div>
-        </div>
-        <div class="card">
-            <div class="img-card"><img src="img/listachamada.png" alt="listachamada" width="200"></div>
-            <div><a href="#" class="btn">Lista de Chamada  </a></div>
+            <div><a href="#" class="btn" onclick="lancarConteudo()">Adicionar Conteúdo</a></div>
         </div>
         <div class="card">
             <div class="img-card"><img src="img/notas.png" width="200" alt=""></div>
-            <div><a href="#" class="btn">Lançar Notas  </a></div>
+            <div><a href="#" class="btn" onclick="lancarNotas()">Lançar Notas  </a></div>
         </div>
         <div class="card">
             <div class="img-card"><img src="img/provas.png" width="200" alt=""></div>
-            <div><a href="#" class="btn"> Provas  </a></div>
+            <div><a href="#" class="btn" onclick="lancarProvas()"> Provas  </a></div>
         </div>
-        <div class="card">
-            <div class="img-card"><img src="img/coreções.png" width="200" alt=""></div>
-            <div><a href="#" class="btn">Correções</a></div>
+        <div class="main-modal" id="modal-notas">
+            <div class="modal">
+                <span class="close" onclick="fecharNotas()">&times;</span>
+                <br><br>
+                <h1>LANÇAR NOTAS</h1>
+                <div class="line"></div><br><br><br>
+                    <form class="modal-content">
+                        <label>Aluno</label>            
+                        <input type="text" placeholder="" required><br>
+                        <label>Matricula</label>            
+                        <input type="text" placeholder="" required>
+                        <br>
+                        <label>Disciplina:</label>
+                        <select name="" id="">
+                            <option value="">Português</option>
+                            <option value="">Matemática</option>
+                            <option value="">História</option>
+                            <option value="">Geografia</option>
+                            <option value="">Inglês</option>
+                        </select><br>
+                        <label>Nota</label>
+                        <input type="number" maxlength="" placeholder="" required><br><br>
+                        <input type="button" onclick="alertConfim()" value="SALVAR">
+                        
+                    </form>
+            </div>
         </div>
-        <div class="card">
-            <div class="img-card"><img src="img/observação.png" width="200" alt=""></div>
-            <div><a href="#" class="btn">Observações</a></div>
+        <div class="main-modal" id="modal-provas">
+            <div class="modal">
+                <span class="close" onclick="fecharProvas()">&times;</span>
+                <br><br>
+                <h1>ADICIONAR PROVAS</h1>
+                <div class="line"></div><br><br>
+                <form class="modal-content">
+                    <label>Disciplina:</label>
+                    <select name="" id="">
+                        <option value="">Português</option>
+                        <option value="">Matemática</option>
+                        <option value="">História</option>
+                        <option value="">Geografia</option>
+                        <option value="">Inglês</option>
+                    </select><br>
+                    <label>Valor da Prova</label>
+                    <input type="number" maxlength="" placeholder="" required><br>
+                    <label>Anexar Prova</label>            
+                    <input type="file" placeholder="" required><br>
+                    <label>Horario Limite</label>            
+                    <input type="time" placeholder="" required>
+                    <br><br>
+                    <label>Observação:</label><br>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>        
+                    <br>
+                    <input type="button" onclick="alertProvas()" value="ADICIONAR">
+                        
+                    </form>
+            </div>
+        </div>
+
+        <div class="main-modal" id="modal-conteudo">
+            <div class="modal">
+                <span class="close" onclick="fecharConteudo()">&times;</span>
+                <br><br>
+                <h1>ADICIONAR CONTEÚDO</h1>
+                <div class="line"></div><br><br><br>
+                <form class="modal-content">
+                    <label>Disciplina:</label>
+                    <select name="" id="">
+                        <option value="">Português</option>
+                        <option value="">Matemática</option>
+                        <option value="">História</option>
+                        <option value="">Geografia</option>
+                        <option value="">Inglês</option>
+                    </select><br>
+                    <label>Anexar Conteúdo</label>            
+                    <input type="file" placeholder="" required>
+                    <br><br>
+                    <label>Observação:</label><br>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>        
+                    <br>
+                    <input type="button" onclick="alertCont()" value="ADICIONAR">
+                        
+                    </form>
+            </div>
         </div>
 
     </section>
 </div>
-
-
-
-
-
-
-
-
 
 
 <div class="footer">
@@ -91,7 +157,8 @@
     </div>
 </div>
     
-    <script src="/js/menu.js"></script>
+<script src="/js/menu.js"></script>
+<script src="/js/professor.js"></script>
 
 
 </body>
